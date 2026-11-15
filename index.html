@@ -19,10 +19,23 @@ body {
         radial-gradient(circle at 15% 15%, #24105a 0%, transparent 35%),
         radial-gradient(circle at 85% 85%, #082c55 0%, transparent 35%),
         #070914;
-    color: #ffffff;
+    color: white;
 }
 
-/* MAIN HEADING */
+/* MAIN CONTAINER */
+.epic-container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 30px 25px;
+    background: linear-gradient(145deg, #101329, #090d1b);
+    border: 1px solid #5141a8;
+    border-radius: 22px;
+    box-shadow:
+        0 0 25px #6545ff30,
+        inset 0 0 30px #00d9ff08;
+}
+
+/* HEADING */
 .epic-title {
     font-family: 'Orbitron', sans-serif;
     font-size: clamp(28px, 6vw, 48px);
@@ -30,18 +43,10 @@ body {
     text-align: center;
     letter-spacing: 3px;
     text-transform: uppercase;
-
-    background: linear-gradient(
-        90deg,
-        #00eaff,
-        #a855f7,
-        #ff36c7
-    );
-
+    background: linear-gradient(90deg, #00eaff, #a855f7, #ff36c7);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-
     filter: drop-shadow(0 0 12px #8b5cf6aa);
     margin-bottom: 35px;
 }
@@ -50,14 +55,15 @@ body {
 .epic-list {
     max-width: 750px;
     margin: auto;
-    padding: 0;
-    list-style: none;
+    padding: 0 !important;
+    list-style: none !important;
     counter-reset: epic-counter;
 }
 
 /* LIST ITEMS */
 .epic-list li {
     counter-increment: epic-counter;
+    list-style: none !important;
 
     font-family: 'Rajdhani', sans-serif;
     font-size: 21px;
@@ -67,12 +73,7 @@ body {
     padding: 18px 22px;
     margin-bottom: 14px;
 
-    background: linear-gradient(
-        110deg,
-        #15172b,
-        #101d35
-    );
-
+    background: linear-gradient(110deg, #15172b, #101d35);
     border: 1px solid #5141a8;
     border-left: 4px solid #00d9ff;
     border-radius: 12px;
@@ -81,13 +82,12 @@ body {
         0 5px 18px #00000066,
         inset 0 0 15px #6545ff12;
 
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 /* CUSTOM NUMBERING */
 .epic-list li::before {
-    content: "0" counter(epic-counter);
-
+    content: counter(epic-counter, decimal-leading-zero) !important;
     display: inline-block;
     margin-right: 16px;
 
@@ -99,25 +99,15 @@ body {
     text-shadow: 0 0 10px #00eaff;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .epic-list li:hover {
     transform: translateX(8px);
     border-color: #00eaff;
-
     box-shadow:
         0 0 15px #00eaff55,
         0 5px 25px #00000088;
-
-    background: linear-gradient(
-        110deg,
-        #202044,
-        #102c4b
-    );
+    background: linear-gradient(110deg, #202044, #102c4b);
 }
-.epic-list {
-    list-style: none;
-    padding-left: 0;
-}	
 </style>
 </head>
 <body>
