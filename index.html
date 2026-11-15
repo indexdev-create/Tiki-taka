@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<title>
+Good morning
+</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Rajdhani:wght@500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 35px 20px;
+    background:
+        radial-gradient(circle at 15% 15%, #24105a 0%, transparent 35%),
+        radial-gradient(circle at 85% 85%, #082c55 0%, transparent 35%),
+        #070914;
+    color: #ffffff;
+}
+
+/* MAIN HEADING */
+.epic-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(28px, 6vw, 48px);
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    background: linear-gradient(
+        90deg,
+        #00eaff,
+        #a855f7,
+        #ff36c7
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    filter: drop-shadow(0 0 12px #8b5cf6aa);
+    margin-bottom: 35px;
+}
+
+/* ORDERED LIST */
+.epic-list {
+    max-width: 750px;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    counter-reset: epic-counter;
+}
+
+/* LIST ITEMS */
+.epic-list li {
+    counter-increment: epic-counter;
+
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    padding: 18px 22px;
+    margin-bottom: 14px;
+
+    background: linear-gradient(
+        110deg,
+        #15172b,
+        #101d35
+    );
+
+    border: 1px solid #5141a8;
+    border-left: 4px solid #00d9ff;
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 18px #00000066,
+        inset 0 0 15px #6545ff12;
+
+    transition: 0.3s ease;
+}
+
+/* CUSTOM NUMBERING */
+.epic-list li::before {
+    content: "0" counter(epic-counter);
+
+    display: inline-block;
+    margin-right: 16px;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+/* HOVER EFFECT */
+.epic-list li:hover {
+    transform: translateX(8px);
+    border-color: #00eaff;
+
+    box-shadow:
+        0 0 15px #00eaff55,
+        0 5px 25px #00000088;
+
+    background: linear-gradient(
+        110deg,
+        #202044,
+        #102c4b
+    );
+}
+.epic-list {
+    list-style: none;
+    padding-left: 0;
+}	
+</style>
+</head>
+<body>
+<h1 class="epic-title">Some Names!</h1>
+<div class="epic-list">
+<ol>
+<li>Ava addams</li>
+<li>Comatozze</li>
+<li>Kendra lust</li>
+<li>Blake blossoms</li>
+<li>Alina rai</li>
+<li>Eva notty</li>
+<li>Hitomi tanaka</li>
+<li>Nicollete shia</li>
+</ol>
+</div>
+</body>
+</html>
